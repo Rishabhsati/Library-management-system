@@ -1,4 +1,4 @@
-package com.rishabh.Librarymanagementsystem;
+package com.rishabh.Librarymanagementsystem.Enums;
 
 public enum CardStatus {
     ISSUED,

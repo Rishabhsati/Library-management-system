@@ -16,7 +16,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @PostMapping("/addStudent")
+    @PostMapping("/add")
     public ResponseEntity addStudent(@RequestBody Student student){
         String result = studentService.addStudent(student);
         return new ResponseEntity(result, HttpStatus.OK);
@@ -33,7 +33,7 @@ public class StudentController {
         return studentService.getAllStudent();
     }
 
-    @PutMapping("/updateStudent")
+    @PutMapping("/update")
     public ResponseEntity updateStudent(@RequestParam("studentId")Integer studentId,@RequestBody Student student){
         String result = studentService.updateStudent(studentId,student);
         return new ResponseEntity(result,HttpStatus.OK);
@@ -49,7 +49,7 @@ public class StudentController {
 //        return new ResponseEntity(result,HttpStatus.OK);
 //    }
 
-    @DeleteMapping("/deleteStudent")
+    @DeleteMapping("/delete")
     public String deleteStudent(@RequestParam("studentId")Integer studentId){
         String result = studentService.deleteStudent(studentId);
         return result;

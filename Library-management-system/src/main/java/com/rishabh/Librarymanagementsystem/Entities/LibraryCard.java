@@ -1,12 +1,13 @@
 package com.rishabh.Librarymanagementsystem.Entities;
 
-import com.rishabh.Librarymanagementsystem.CardStatus;
+import com.rishabh.Librarymanagementsystem.Enums.CardStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,13 +20,13 @@ import java.util.Date;
 public class LibraryCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int cardNo;
+    private Integer cardNo;
     @Enumerated(value = EnumType.STRING)
     private CardStatus cardStatus;
 
     private int noOfBooksIssued;
 
-    private Date validity;
+    private LocalDate validity;
 
     @JoinColumn // This tells that a new column is adding the LB
     @OneToOne  // mapping is one to one
