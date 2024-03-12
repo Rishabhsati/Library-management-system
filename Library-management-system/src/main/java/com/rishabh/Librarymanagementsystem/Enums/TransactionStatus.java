@@ -3,5 +3,7 @@ package com.rishabh.Librarymanagementsystem.Enums;
 public enum TransactionStatus {
     PENDING,
     SUCCESS,
-    FAILURE
+    FAILURE,
+    ISSUED,
+    COMPLETED
 }

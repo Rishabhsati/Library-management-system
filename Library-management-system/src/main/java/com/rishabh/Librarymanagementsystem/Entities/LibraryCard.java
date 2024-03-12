@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -26,7 +25,7 @@ public class LibraryCard {
 
     private int noOfBooksIssued;
 
-    private LocalDate validity;
+    private Date validity;
 
     @JoinColumn // This tells that a new column is adding the LB
     @OneToOne  // mapping is one to one

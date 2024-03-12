@@ -52,11 +52,7 @@ public class BookService {
             //thow an exception saying AuthorId entered is incorrect
             throw new Exception("AuthorId entered is incorrect");
         }
-
         Author author = optionalAuthor.get();
-
-
-
 //        Author author = authorRepository.findById(authorId).get();
 
         //associate book and author Entity

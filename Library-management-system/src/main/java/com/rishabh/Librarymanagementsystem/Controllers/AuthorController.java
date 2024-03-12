@@ -19,4 +19,10 @@ public class AuthorController {
         String res = authorService.addAuthor(author);
         return new ResponseEntity(res, HttpStatus.OK);
     }
+
+    @GetMapping("getMaxAuthor")
+    public Author getMaxAuthor(){
+        Author author = authorService.getMaxAuthor();
+        return author;
+    }
 }
